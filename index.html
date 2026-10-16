@@ -1,1 +1,177 @@
-EDITOR OPEN
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10110f">
+<title>Calgary Auto Detailer | Precision Car Care</title>
+<meta name="description" content="Premium automotive detailing in Calgary. Discover meticulous interior and exterior care for your vehicle.">
+<link rel="preconnect" href="https://images.unsplash.com">
+<style>
+:root{--bg:#10110f;--panel:#191a17;--lime:#d6ff45;--white:#f4f4ed;--muted:#a2a39a;--line:#33342e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1160px,90%);margin:auto}
+header{height:82px;display:flex;align-items:center;border-bottom:1px solid #ffffff18;background:#10110ff2;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:17px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--lime)}
+.links{display:flex;align-items:center;gap:28px;font-size:13px;color:#d3d3cc}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:14px 20px;background:var(--lime);color:#11130b;font-weight:800;font-size:12px;letter-spacing:.5px;border:0;border-radius:3px;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px);background:#e6ff85}
+.btn-outline{background:transparent;color:var(--white);border:1px solid #77786e}
+.btn-outline:hover{color:#111;background:var(--lime)}
+.hero{min-height:690px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#10110ff5 0%,#10110fc9 48%,#10110f25 100%),url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{padding:90px 0;max-width:700px}
+.eyebrow{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:22px}
+h1{font-size:clamp(43px,7vw,84px);line-height:.99;letter-spacing:-3px;font-weight:900;margin-bottom:25px}
+h1 span{color:var(--lime)}
+.hero p{max-width:490px;color:#d0d0c9;font-size:16px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:48px;padding-top:24px;border-top:1px solid #ffffff35}
+.trust strong{display:block;font-size:18px}
+.trust small{font-size:10px;color:#c1c1b8;letter-spacing:1px;text-transform:uppercase}
+section{padding:100px 0}
+.section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:42px}
+h2{font-size:clamp(32px,4vw,52px);letter-spacing:-1.7px;line-height:1.1}
+.section-top p,.intro{max-width:410px;color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);padding:30px;transition:.25s}
+.card:hover{border-color:var(--lime);transform:translateY(-4px)}
+.number{font-size:12px;color:var(--lime);letter-spacing:2px}
+.card h3{font-size:22px;margin:25px 0 10px}
+.card p{color:var(--muted);font-size:13px;min-height:65px}
+.card a{display:inline-block;margin-top:22px;color:var(--lime);font-size:12px;font-weight:bold}
+.dark-band{background:#d6ff45;color:#15170e;padding:56px 0}
+.band-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.band-inner p{font-size:14px;max-width:480px}
+.band-inner .btn{background:#15170e;color:white}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:12px}
+.gallery img{width:100%;height:300px;object-fit:cover;display:block;filter:saturate(.7);transition:.3s}
+.gallery img:hover{filter:saturate(1)}
+.gallery .large img{height:380px}
+.gallery-label{font-size:10px;letter-spacing:2px;color:var(--muted);margin-top:12px}
+.process{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.step{border-top:1px solid var(--line);padding-top:22px}
+.step b{color:var(--lime);font-size:12px}
+.step h3{font-size:19px;margin:14px 0 8px}
+.step p{font-size:13px;color:var(--muted)}
+.contact{background:#191a17}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.contact-copy p{color:var(--muted);margin-top:20px;max-width:420px}
+.contact-card{border:1px solid var(--line);padding:30px}
+.contact-card h3{margin-bottom:10px}
+.contact-card p{color:var(--muted);font-size:13px;margin-bottom:22px}
+footer{padding:30px 0;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.reveal{animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:760px){
+ header{height:70px}.links{display:none}.hero{min-height:650px;background-position:58% center}
+ .hero-content{padding:75px 0}h1{letter-spacing:-2px}
+ section{padding:70px 0}.section-top{display:block}.section-top p{margin-top:18px}
+ .cards,.process,.contact-grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr}.gallery .large{grid-column:span 2}
+ .gallery .large img,.gallery img{height:230px}
+ .band-inner{align-items:flex-start;flex-direction:column}
+ .trust{gap:20px}.contact-grid{gap:30px}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap nav">
+  <a class="logo" href="#home">CALGARY <span>AUTO.</span></a>
+  <nav class="links">
+   <a href="#services">Services</a><a href="#work">Our Work</a><a href="#process">Our Process</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="btn" href="#contact">GET A QUOTE ↗</a>
+ </div>
+</header>
+<main>
+<section class="hero" id="home">
+ <div class="wrap"><div class="hero-content reveal">
+  <div class="eyebrow">CALGARY · AUTOMOTIVE DETAILING</div>
+  <h1>NOT JUST CLEAN.<br><span>REDEFINED.</span></h1>
+  <p>Your vehicle deserves more than a quick wash. Experience meticulous detailing designed to restore the finish, refresh the interior, and bring back that just-detailed feeling.</p>
+  <div class="actions"><a class="btn" href="#contact">BOOK YOUR DETAIL ↗</a><a class="btn btn-outline" href="#services">EXPLORE SERVICES ↓</a></div>
+  <div class="trust">
+   <div><strong>01</strong><small>Attention to detail</small></div>
+   <div><strong>02</strong><small>Carefully selected products</small></div>
+   <div><strong>03</strong><small>Customer-first service</small></div>
+  </div>
+ </div></div>
+</section>
+<section id="services">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">WHAT WE DO</div><h2>Every detail.<br>Every surface.</h2></div><p>From a deep interior refresh to a glossy exterior finish, choose the care that fits your vehicle. Contact us to confirm available services and pricing.</p></div>
+  <div class="cards">
+   <article class="card"><span class="number">01 / INTERIOR</span><h3>Interior Revival</h3><p>Thoughtful cleaning for seats, carpets, mats and high-touch surfaces to make your cabin feel fresh again.</p><a href="#contact">ASK ABOUT INTERIOR ↗</a></article>
+   <article class="card"><span class="number">02 / EXTERIOR</span><h3>Exterior Perfection</h3><p>A careful exterior clean focused on paintwork, wheels, glass and the details that make the finish stand out.</p><a href="#contact">ASK ABOUT EXTERIOR ↗</a></article>
+   <article class="card"><span class="number">03 / FULL DETAIL</span><h3>The Complete Reset</h3><p>A tailored interior and exterior treatment for drivers who want their vehicle looking its best inside and out.</p><a href="#contact">ASK ABOUT FULL DETAIL ↗</a></article>
+  </div>
+ </div>
+</section>
+<div class="dark-band"><div class="wrap band-inner"><div><h2>Good cars deserve<br>great care.</h2><p>Tell us about your vehicle and what you want to improve. We'll help you find the right detailing option.</p></div><a class="btn" href="#contact">LET'S TALK ↗</a></div></div>
+<section id="work">
+ <div class="wrap">
+  <div class="section-top"><div><div class="eyebrow">THE FINISH SPEAKS</div><h2>Made for the<br>love of driving.</h2></div><p>A visual preview of the premium look and feel we're aiming for. Replace these reference photos with real Calgary Auto Detailer work before publishing to customers.</p></div>
+  <div class="gallery">
+   <div class="large"><img loading="lazy" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=80" alt="Dark premium sports car"><div class="gallery-label">EXTERIOR FINISH</div></div>
+   <div><img loading="lazy" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=700&q=80" alt="Sports car exterior"><div class="gallery-label">DESIGN & DETAIL</div></div>
+   <div><img loading="lazy" src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=700&q=80" alt="Luxury car on the road"><div class="gallery-label">DRIVING EXPERIENCE</div></div>
+  </div>
+ </div>
+</section>
+<section id="process">
+ <div class="wrap">
+  <div class="eyebrow">SIMPLE FROM START TO FINISH</div><h2>Three steps.<br>One better-looking car.</h2>
+  <div class="process" style="margin-top:42px">
+   <article class="step"><b>STEP 01</b><h3>Tell us about your car</h3><p>Share your vehicle type, condition and the service you're interested in.</p></article>
+   <article class="step"><b>STEP 02</b><h3>Choose your detail</h3><p>Discuss the available options, expected results, timing and confirmed price.</p></article>
+   <article class="step"><b>STEP 03</b><h3>Enjoy the refresh</h3><p>Arrange your appointment directly with the detailing team.</p></article>
+  </div>
+ </div>
+</section>
+<section class="contact" id="contact">
+ <div class="wrap contact-grid">
+  <div class="contact-copy"><div class="eyebrow">YOUR NEXT DETAIL STARTS HERE</div><h2>Let's make your<br>car stand out.</h2><p>Ready to give your vehicle some attention? Reach out to discuss your car, your goals and the best detailing option for you.</p></div>
+  <div class="contact-card"><h3>Request a detailing quote</h3><p>This demo prepares a message for you to copy. It does not send or store enquiries.</p>
+   <form id="quoteForm">
+    <label for="vehicle">Vehicle make and model</label><input id="vehicle" required placeholder="e.g. BMW 3 Series">
+    <label for="service">Service interested in</label><select id="service"><option>Interior Revival</option><option>Exterior Perfection</option><option>Complete Detail</option><option>Not sure yet</option></select>
+    <label for="notes">Anything we should know?</label><textarea id="notes" rows="3" placeholder="Your goals, condition, preferred timing..."></textarea>
+    <button class="btn" style="width:100%;margin-top:20px" type="submit">PREPARE MY ENQUIRY ↗</button>
+   </form>
+   <div id="result" style="display:none;margin-top:20px"><textarea id="message" rows="7" readonly style="width:100%"></textarea><button type="button" class="btn" id="copyBtn" style="margin-top:10px">COPY MESSAGE</button><p id="copyStatus" aria-live="polite"></p></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><span class="logo">CALGARY <span style="color:var(--lime)">AUTO.</span></span><span>Independent website concept · Calgary, Alberta</span><span>© <span id="year"></span> Calgary Auto Detailer concept</span></div></footer>
+<style>
+label{display:block;font-size:12px;margin:15px 0 6px;color:#deded6}
+input,select,textarea{width:100%;padding:12px;background:#10110f;color:#f4f4ed;border:1px solid #45463e;border-radius:2px;font:inherit;font-size:13px}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--lime)}
+</style>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ const vehicle=document.getElementById('vehicle').value.trim();
+ const service=document.getElementById('service').value;
+ const notes=document.getElementById('notes').value.trim();
+ document.getElementById('message').value="Hello Calgary Auto Detailer! I'd like to enquire about detailing my "+vehicle+".\nService: "+service+"\nAdditional details: "+(notes||"Not provided")+"\nPlease let me know the available options and pricing.";
+ document.getElementById('result').style.display='block';
+});
+document.getElementById('copyBtn').addEventListener('click',async function(){
+ const message=document.getElementById('message');
+ try{await navigator.clipboard.writeText(message.value);document.getElementById('copyStatus').textContent='Message copied!';}
+ catch(e){message.select();document.execCommand('copy');document.getElementById('copyStatus').textContent='Select and copy the message above if needed.';}
+});
+</script>
+</body>
+</html>
